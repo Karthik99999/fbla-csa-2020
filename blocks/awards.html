@@ -1,0 +1,93 @@
+<div class="container">
+  <table id="awards-table" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Award</th>
+        <th>Minimum Hours</th>
+        <th>Maximum Hours</th>
+        <th>Manage</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<div class="modal fade" id="add-award-modal" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <form class="modal-content needs-validation" id="add-award-form" novalidate>
+      <div class="modal-header">
+        <h4 class="modal-title">Add award</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="award">Award:</label>
+          <input type="text" class="form-control" name="award" required>
+          <div class="invalid-feedback">This field is required</div>
+        </div>
+        <div class="form-group">
+          <label for="min">Minimum Hours:</label>
+          <input type="number" class="form-control" name="min" min=0 required>
+          <div class="invalid-feedback">This field is required</div>
+        </div>
+        <div class="form-group">
+          <label for="max">Maximum Hours:</label>
+          <input type="number" class="form-control" name="max" min=1 required>
+          <div class="invalid-feedback">This field is required</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" name="submit" class="btn btn-success"><i class="fa fa-plus"></i> Add</button>
+        <button type="button" class="btn btn-warning" data-dismiss="modal" onclick="$('#add_hours-form').removeClass('was-validated')"><i class="fa fa-times"></i> Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal fade" id="award-delete-modal" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="award-edit-title"></h4>
+      </div>
+      <div class="modal-body">
+        <p>This will also permanently delete all service hours added to this student.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" role="delete-award-confirm" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="award-edit-modal" role="dialog">
+  <div class="modal-dialog modal-dialog-centered modal-md">
+    <form class="modal-content needs-validation" id="award-edit-form" novalidate>
+      <div class="modal-header">
+        <h4 class="modal-title">Edit award</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="award">Award:</label>
+          <input type="text" class="form-control" name="award" required>
+          <div class="invalid-feedback">This field is required</div>
+        </div>
+        <div class="form-group">
+          <label for="min">Minimum Hours:</label>
+          <input type="number" class="form-control" name="min" min=0 required>
+          <div class="invalid-feedback">This field is required</div>
+        </div>
+        <div class="form-group">
+          <label for="max">Maximum Hours:</label>
+          <input type="number" class="form-control" name="max" min=1 required>
+          <div class="invalid-feedback">This field is required</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" name="submit" class="btn btn-success"><i class="fa fa-save"></i> Save</button>
+        <button type="button" class="btn btn-warning" data-dismiss="modal" onclick="$('#add_hours-form').removeClass('was-validated')"><i class="fa fa-times"></i> Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="./node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="./node_modules/datatables.net-select-bs4/css/select.bootstrap4.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/sidebar.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="sidebar"></nav>
+    <div id="content">
+      <div id="students-page" class="page"></div>
+      <div id="awards-page" class="page"></div>
+      <div id="help-page" class="page"></div>
+    </div>
+  </div>
+  <script>
+    // Load node modules
+    window.$ = window.jQuery = require("jQuery")
+    window.fs = require("fs")
+    window.electron = require("electron").remote
+    window.Store = require("electron-store")
+    window.require("datatables.net-bs4")(window, $)
+    window.require("datatables.net-select-bs4")(window, $)
+  </script>
+  <script src="./src/index.js"></script>
+  <script src="./src/students.js"></script>
+  <script src="./src/awards.js"></script>
+  <script src="./src/report.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

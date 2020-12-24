@@ -1,0 +1,26 @@
+<div class="sidebar-header">
+  <h3>CSA Manager</h3>
+</div>
+<ul class="list-unstyled components">
+  <li>
+    <a href="#" class="nav-link" id="students"><i class="fa fa-user-alt"></i> Students</a>
+  </li>
+  <li>
+    <a href="#" class="nav-link" id="awards"><i class="fa fa-award"></i> Awards</a>
+  </li>
+  <li>
+    <a href="#" class="nav-link" id="help"><i class="fa fa-info-circle"></i> Help</a>
+  </li>
+</ul>
+<div class="dropdown" id="manage-dropdown">
+  <button class="btn btn-link" data-toggle="dropdown" style="color:inherit">Manage Students <i class="fa fa-caret-down"></i></button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#add-student-modal">Add student</a>
+    <div class="dropdown-divider"></div>
+    <div id="student-reports">
+      <a class="dropdown-item" href="#" id="report-week">Generate report for past week</a>
+      <a class="dropdown-item" href="#" id="report-month">Generate report for past month</a>
+    </div>
+  </div>
+</div>
+<button id="change-theme" class="btn btn-info btn-sm" style="position:absolute;left:3.5vw;bottom:2vh;"><span></span> <i class="fa"></i></button>
